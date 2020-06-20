@@ -1,10 +1,10 @@
+// check cyclic graph or not
 package com.company;
-
 import java.util.*;
-public class graph {
+public class graph3 {
     int V;
     LinkedList<Integer> adj[];
-    graph(int v){
+    graph3(int v){
         V=v;
         adj=new LinkedList[V];
         for(int i=0;i<v;i++){
@@ -39,7 +39,7 @@ public class graph {
         for(int i=0;i<v;i++){
             vis[i]=0;
         }
-        graph g1=new graph(v);
+        graph3 g1=new graph3(v);
         g1.addEdge(1, 0);
         g1.addEdge(0, 2);
         g1.addEdge(2, 1);
