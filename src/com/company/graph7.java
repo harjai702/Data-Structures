@@ -1,10 +1,10 @@
 // check cyclic undirected graph or not
 package com.company;
 import java.util.*;
-public class graph3 {
+public class graph7 {
     int V;
     LinkedList<Integer> adj[];
-    graph3(int v){
+    graph7(int v){
         V=v;
         adj=new LinkedList[V];
         for(int i=0;i<v;i++){
@@ -13,7 +13,6 @@ public class graph3 {
     }
     public void addEdge(int s,int e){
         adj[s].add(e);
-        adj[e].add(s);
     }
     void dfs(int src,int vis[]){
         int count=0;
@@ -34,17 +33,18 @@ public class graph3 {
         }
     }
     public static void main(String args[]) {
-        int v=5;
+        int v=4;
         int vis[]=new int[v];
         for(int i=0;i<v;i++){
             vis[i]=0;
         }
-        graph3 g1=new graph3(v);
-        g1.addEdge(1, 0);
-        g1.addEdge(0, 2);
-        g1.addEdge(2, 1);
-        g1.addEdge(0, 3);
-        g1.addEdge(3, 4);
-        g1.dfs(0,vis);
+        graph7 graph=new graph7(v);
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 2);
+        graph.addEdge(1, 2);
+        graph.addEdge(2, 0);
+        graph.addEdge(2, 3);
+        graph.addEdge(3, 3);
+        graph.dfs(0,vis);
     }
 }
