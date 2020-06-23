@@ -1,4 +1,4 @@
-// check cyclic undirected graph or not
+// check for the cycle in undirected graph
 package com.company;
 import java.util.*;
 public class graph7 {
